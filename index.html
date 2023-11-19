@@ -15,41 +15,74 @@
   <link rel="stylesheet" href="./css/style.css">
 </head>
 
-<body>
+<body class="bg-danger ">
 
  
     <div class="container">
-        <div class="row">
-            <div class="col-4 mb-3">
-             <label for="name-surname" class="form-label">Nome Cognome</label>
-             <input type="text" class="form-control" id="user_name_surname" placeholder="Inserisci Nome e Cognome">
-           </div>
-           <div class="col-4 mb-3">
-             <label for="km" class="form-label">Km da percorrere</label>
-             <input type="text" class="form-control" id="user_km" placeholder="Inserisci Km da percorrere">
-           </div>
-          <div class="col-4">
-             <label for="inputState" class="form-label">Fascia d'età</label>
-            <select id="select_age" class="form-select" aria-label="Default select example">
-               <option selected value="0">Opzioni...</option>
-               <option value="1">Minorenne</option>
-               <option value="2">Maggiorenne</option>
-               <option value="3">Anziani</option>
-             </select>
-          </div>
-          <div class="col-12">
-             <button type="submit" class="btn btn-primary" id="btn">Sign in</button>
-           </div>
-        </div>
-        <div class="row">
-          <div class="col-12">
-            <p id="ticket_price">
 
-            </p>
+      <h1 class="text-white text-center mt-5"> CALCOLA IL PREZZO DEL TUO BIGLIETTO </h1>
+
+        <div class="bg-white m-5 text-center p-4 rounded-4 box-shadow">
+          <div class="row">
+              <div class="col-4 mb-3">
+              <label for="name-surname" class="form-label text-danger fw-bold">Nome Cognome</label>
+              <input type="text" class="form-control border-danger" id="user_name_surname" placeholder="Inserisci Nome e Cognome">
+            </div>
+            <div class="col-4 mb-3">
+              <label for="km" class="form-label text-danger fw-bold">Km da percorrere</label>
+              <input type="text" class="form-control border-danger" id="user_km" placeholder="Inserisci Km da percorrere">
+            </div>
+            <div class="col-4">
+              <label for="inputState" class="form-label text-danger fw-bold">Fascia d'età</label>
+              <select id="select_age" class="form-select border-danger" aria-label="Default select example">
+                <option selected value="0">Opzioni...</option>
+                <option value="1">Minorenne</option>
+                <option value="2">Maggiorenne</option>
+                <option value="3">Anziani</option>
+              </select>
+            </div>
+            <div class="col-12">
+              <button type="submit" class="btn btn-secondary border-warning" id="btn">Sign in</button>
+            </div>
+          </div>
+        </div>  
+        
+        <h1 class="text-white text-center"> IL TUO BIGLIETTO  </h1>
+
+        <div class="bg-white m-5 p-4 rounded-4 box-shadow">
+
+          <h4>DETTAGLI PASSEGGERI</h4>
+
+          <div class="row border border-secondary border-end-0">
+            
+            <div class="col-3 bg-secondary">
+                <h4> NOME PASSEGGERO </h4>
+                <p id="user_name"></p>
+            </div>
+
+            <div class="col-2 ">
+                <h5>Offerta</h5>
+                <p>Biglietto Standard</p>
+            </div>
+
+            <div class="col-2 ">
+              <h5>Carrozza</h5>
+              <p id="cabin_n"></p>
+            </div>
+
+            <div class="col-2">
+              <h5>Codice Cp</h5>
+              <p id="cp_n"></p>
+            </div>
+
+            <div class="col-2">
+              <h5>Costo biglietto</h5>
+              <p id="ticket_price"></p>
+            </div>
           </div>
         </div>
         
-      </div>
+    </div>
    
  
 

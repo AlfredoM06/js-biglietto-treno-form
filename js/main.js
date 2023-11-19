@@ -2,6 +2,9 @@ function calcTicket(event) {
     event.preventDefault();
     let nameSurname = document.getElementById("user_name_surname").value;
     let km = document.getElementById("user_km").value;
+    let randomCp = Math.floor(Math.random() * 100001);
+    let randomCabin = Math.floor(Math.random() * 11);
+
 
     let ticketPrice = km * 0.21; 
     let ticketPriceforMinors = ticketPrice * 20 / 100;
@@ -20,9 +23,13 @@ function calcTicket(event) {
 
     let finalPrice = ticketPrice.toFixed(2);
 
-    document.getElementById("ticket_price").innerHTML = nameSurname + " " + finalPrice;
+    document.getElementById("user_name").innerHTML = nameSurname;
+    document.getElementById("ticket_price").innerHTML = finalPrice;
+    document.getElementById("cabin_n").innerHTML= randomCabin;
+    document.getElementById("cp_n").innerHTML= randomCp;
 
-}
+  
+}   
 
 btn.addEventListener("click",calcTicket);
 
